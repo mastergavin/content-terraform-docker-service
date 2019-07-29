@@ -36,9 +36,9 @@ resource "docker_service" "mysql-service" {
       }
 
       mounts {
-          target = "/var/lib/mysql"
-          source = "${docker_volume.mysql_data_volume.name}"
-          type   = "volume"
+        target = "/var/lib/mysql"
+        source = "${docker_volume.mysql_data_volume.name}"
+        type   = "volume"
       }
     }
     networks = ["${docker_network.private_bridge_network.name}"]

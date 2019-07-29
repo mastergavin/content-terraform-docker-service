@@ -8,3 +8,4 @@ resource "docker_network" "private_bridge_network" {
   driver   = "overlay"
   internal = true
 }
+

@@ -59,3 +59,4 @@ variable "ghost_ext_port" {
   description = "Ghost public port"
   default     = "80"
 }
+
