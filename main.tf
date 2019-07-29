@@ -3,7 +3,7 @@ resource "docker_service" "ghost-service" {
 
   task_spec {
     container_spec {
-      image = "${var.ghost_image.name}"
+      image = "${var.ghost_image}"
 
       env = {
         database__client               = "mysql"
@@ -29,7 +29,7 @@ resource "docker_service" "mysql-service" {
 
   task_spec {
     container_spec {
-      image = "${var.mysql_image.name}"
+      image = "${var.mysql_image}"
 
       env = {
         MYSQL_ROOT_PASSWORD = "${var.mysql_root_password}"
