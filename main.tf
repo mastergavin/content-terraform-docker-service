@@ -38,7 +38,7 @@ resource "docker_service" "ghost-service" {
   }
 
   endpoint_spec {
-    ports = {
+    ports {
       target_port    = "2368"
       published_port = "${var.ghost_ext_port}"
     }
